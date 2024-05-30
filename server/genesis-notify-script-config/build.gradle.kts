@@ -1,0 +1,26 @@
+dependencies {
+    implementation("global.genesis:genesis-pal-execution")
+    compileOnly("global.genesis:genesis-dictionary")
+    implementation("global.genesis:genesis-cluster")
+    implementation("global.genesis:genesis-messages")
+    api(project(":genesis-notify-dispatcher"))
+    api(project(":genesis-notify-eventhandler"))
+    api(project(":genesis-notify-messages"))
+    api("global.genesis:genesis-pal-dataserver")
+    api("global.genesis:genesis-pal-requestserver")
+    api("global.genesis:genesis-pal-streamer")
+    api("global.genesis:genesis-pal-streamerclient")
+    api("global.genesis:genesis-pal-eventhandler")
+    api("global.genesis:genesis-evaluator")
+    api("global.genesis:genesis-criteria")
+    compileOnly(project(path = ":genesis-notify-dictionary-cache", configuration = "codeGen"))
+    testImplementation(project(path = ":genesis-notify-dictionary-cache", configuration = "codeGen"))
+    testImplementation(project(path = ":genesis-notify-test-dictionary-cache", configuration = "codeGen"))
+    testCompileOnly(project(":genesis-notify-config"))
+    testImplementation("global.genesis:genesis-dbtest")
+    testImplementation("global.genesis:genesis-testsupport")
+    testImplementation("global.genesis:genesis-net")
+    testImplementation("com.icegreen:greenmail")
+}
+
+description = "genesis-notify-script-config"

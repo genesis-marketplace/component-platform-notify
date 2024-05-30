@@ -1,0 +1,35 @@
+#USER
+USER.USER_NAME,USER.FIRST_NAME,USER.LAST_NAME,USER.EMAIL_ADDRESS,USER.STATUS
+JohnDoe,John,Doe,johndoe@genesis.global,ENABLED
+JaneDoe,Jane,Doe,janedoe@genesis.global,ENABLED
+JanieDoe,Janie,Doe,janiedoe@genesis.global,ENABLED
+JohnyDoe,Johny,Doe,johnydoe@genesis.global,ENABLED
+#RIGHT_SUMMARY
+USER_NAME,RIGHT_CODE
+JohnDoe,NotificationRuleSubscribe
+JohnDoe,NotificationRuleUnsubscribe
+JohnDoe,NotificationRuleEnable
+JohnDoe,NotificationRuleDisable
+JohnDoe,NotificationRuleCreate
+JohnDoe,NotificationRuleUpdate
+JohnDoe,NotificationRuleDelete
+JaneDoe,NotificationRuleSubscribe
+JaneDoe,NotificationRuleUnsubscribe
+JaneDoe,NotificationRuleEnable
+JaneDoe,NotificationRuleDisable
+JaneDoe,NotificationRuleCreate
+JaneDoe,NotificationRuleUpdate
+JaneDoe,NotificationRuleDelete
+JohnyDoe,NotificationAdminAction
+JohnyDoe,NotificationRuleEnable
+JohnyDoe,NotificationRuleDisable
+JohnyDoe,NotificationRuleUnsubscribe
+JohnyDoe,NotificationRuleCreate
+JohnyDoe,NotificationRuleUpdate
+JohnyDoe,NotificationRuleDelete
+#DYNAMIC_RULE
+ID,USER_NAME,NAME,DESCRIPTION,RULE_TABLE,RULE_EXPRESSION,RESULT_EXPRESSION,RULE_STATUS,PROCESS_NAME,MESSAGE_TYPE,IS_TEMPLATE,RULE_TYPE,RULE_EXECUTION_STRATEGY
+DR-0001,JohnDoe,name_custom,description_custom,table_name_custom,((COST > 400)),result_expression_custom,ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,false,NOTIFY,UNLIMITED
+DR-0002,JanieDoe,name_custom,description_custom,table_name_custom,((COST > 100)),result_expression_custom,ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,false,NOTIFY,UNLIMITED
+DR-1234,JohnDoe,name-update,description-update,table_name-update,((QUANTITY > 1000)),((TOPIC = "Topic")),ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,true,NOTIFY,UNLIMITED
+DR-1235,JohnDoe,name-update,description-update,table_name-update,((QUANTITY > 1000)),((TOPIC = "Topic")),DISABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,true,NOTIFY,UNLIMITED

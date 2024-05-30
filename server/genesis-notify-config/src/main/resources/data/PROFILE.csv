@@ -1,0 +1,7 @@
+"NAME","DESCRIPTION","STATUS"
+"NOTIFICATION_ADMIN","Notification Admin has the ability to perform any admin action related to notifications","ENABLED"
+"NOTIFICATION_RULE_ADMIN","Notification Rule Admin has the ability to create notification rules","ENABLED"
+"NOTIFICATION_RULE_TEMPLATE_ADMIN","Notification Rule Template Admin has the ability to create notification rule templates","ENABLED"
+"NOTIFICATION_RULE_USER","Notification Rule User has the ability to subscribe/unsubscribe etc to notification rules","ENABLED"
+"NOTIFICATION_ROUTE_ADMIN","Notification Route Admin has the ability to create notification routes","ENABLED"
+"NOTIFICATION_USER","Notification User can manage their own notification rules and receive notifications","ENABLED"

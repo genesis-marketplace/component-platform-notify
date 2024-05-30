@@ -1,0 +1,10 @@
+{
+  "name": "@genesislcap/pbc-notify-seed",
+  "version": "1.0.1",
+  "description": "Genesis Notify PBC",
+  "license": "SEE LICENSE IN license.txt",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {}
+}

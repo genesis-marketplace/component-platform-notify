@@ -1,0 +1,42 @@
+#USER
+USER.USER_NAME,USER.FIRST_NAME,USER.LAST_NAME,USER.EMAIL_ADDRESS,USER.STATUS
+JohnDoe,John,Doe,johndoe@genesis.global,ENABLED
+JaneDoe,Jane,Doe,janedoe@genesis.global,ENABLED
+JanieDoe,Janie,Doe,janiedoe@genesis.global,ENABLED
+JohnyDoe,Johny,Doe,johnydoe@genesis.global,ENABLED
+#RIGHT_SUMMARY
+USER_NAME,RIGHT_CODE
+JohnDoe,NotificationRuleSubscribe
+JohnDoe,NotificationRuleUnsubscribe
+JohnDoe,NotificationRuleTemplateCreate
+JohnDoe,NotificationRuleTemplateUpdate
+JohnDoe,NotificationRuleTemplateDelete
+JohnDoe,NotificationRuleView
+JohnDoe,NotificationRuleTemplateView
+JohnDoe,NotificationRouteTopicsView
+JaneDoe,NotificationRuleTemplateDelete
+JaneDoe,NotificationAdminAction
+JaneDoe,NotificationRuleTemplateUpdate
+JaneDoe,NotificationRuleSubscribe
+JanieDoe,NotificationRuleTemplateUpdate
+JanieDoe,NotificationRuleTemplateDelete
+JohnyDoe,NotificationRuleUnsubscribe
+JohnyDoe,NotificationAdminAction
+#DYNAMIC_RULE
+ID,USER_NAME,NAME,DESCRIPTION,RULE_TABLE,RULE_EXPRESSION,RESULT_EXPRESSION,RULE_STATUS,PROCESS_NAME,MESSAGE_TYPE,IS_TEMPLATE,RULE_TYPE,RULE_EXECUTION_STRATEGY
+DR-1234,JohnDoe,name-update,description-update,table_name-update,((QUANTITY > 1000)),((TOPIC = "Topic")),ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,true,NOTIFY,UNLIMITED
+DR-1235,JohnDoe,not-notify-name,description-update,table_name-update,((QUANTITY > 1000)),((TOPIC = "Topic")),ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,false,NOT_NOTIFY,UNLIMITED
+DR-0000,SuperUser,template,description,table_name,((COST > {{COST}})),result_expression,ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,true,NOTIFY,UNLIMITED
+DR-0001,JohnDoe,name_custom,description_custom,table_name_custom,((COST > 400)),((TOPIC = "Topic")),ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,false,NOTIFY,UNLIMITED
+DR-0002,JohnyDoe,name_custom,description_custom,table_name_custom,((COST > 400)),((TOPIC = "Topic")),ENABLED,GENESIS_NOTIFY,EVENT_NOTIFY_INSERT,false,NOTIFY,UNLIMITED
+#DYNAMIC_RULE_TEMPLATE_PARAMS
+DYNAMIC_RULE_ID,PARAM_NAME,PARAM_SOURCE,PARAM_SOURCE_TYPE,PARAM_TYPE,PARAM_LABEL,PARAM_OPERATOR
+DR-0000,COST,,USER_TEXT,STRING,COST,>
+DR-1234,parameter_name-update,REQ_TEST_UPDATE,REQ_REP,STRING,PARAM_KEY_UPDATE,>
+DR-1234,parameter_name-update-two,REQ_TEST_UPDATE,REQ_REP,STRING,PARAM_KEY_UPDATE,>
+#NOTIFY_ROUTE
+NOTIFY_ROUTE_ID,TOPIC_MATCH,GATEWAY_ID
+NR-0000,topic1,G-0000
+NR-0001,topic1,G-0001
+NR-0002,topic2,G-0002
+NR-0003,topic3,G-0003

@@ -1,0 +1,3 @@
+"NOTIFY_ROUTE_ID","ENTITY_ID_TYPE","EXCLUDE_SENDER"
+"EveryonesScreen","ALL","false"
+"MyScreen","SELF","false"
