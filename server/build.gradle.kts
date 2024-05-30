@@ -51,7 +51,7 @@ subprojects {
 
     dependencies {
         implementation(platform("global.genesis:genesis-bom:${properties["genesisVersion"]}"))
-        testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.9.10")
+        testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:2.0.0")
         constraints {
             // define versions of your dependencies here so that submodules do not have to define versions
             api("org.simplejavamail:simple-java-mail:8.8.4")
