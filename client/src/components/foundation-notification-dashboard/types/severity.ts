@@ -1,0 +1,13 @@
+export const SEVERITY_INFORMATION = 'INFORMATION';
+export const SEVERITY_CRITICAL = 'CRITICAL';
+export const SEVERITY_SERIOUS = 'SERIOUS';
+export const SEVERITY_WARNING = 'WARNING';
+
+export const ALL_SEVERITIES = [
+  SEVERITY_INFORMATION,
+  SEVERITY_CRITICAL,
+  SEVERITY_SERIOUS,
+  SEVERITY_WARNING,
+] as const;
+
+export type Severity = (typeof ALL_SEVERITIES)[number];

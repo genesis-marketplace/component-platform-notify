@@ -1,0 +1,2 @@
+"SENDER","TOPIC","EXPIRY","HEADER","BODY","NOTIFY_SEVERITY","APPLICATION_REF"
+"System","symphonyRoom",,"FXP Trade Message","<p>Trade Id [000000000001101FXLO1]<BR>Status [NEW]<BR>Entered By: [JohnDoe]<BR></p>","Information",

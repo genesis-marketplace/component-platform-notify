@@ -1,0 +1,19 @@
+import type { AppMetadata } from '@genesislcap/foundation-shell/app';
+
+/**
+ * @public
+ */
+export const metadata: AppMetadata = {
+  name: '@genesislcap/pbc-notify-ui',
+  description: 'Genesis Notify PBC',
+  version: '@pbc.version@',
+  prerequisites: {
+    '@genesislcap/foundation-ui': '@foundationVersion@',
+    gsf: '@genesisVersion@',
+  },
+  dependencies: {
+    '@genesislcap/pbc-notify-ui': '@client.version@',
+    '@genesislcap/foundation-notifications': '@foundationVersion@',
+    serverDepId: '@server.version@',
+  },
+};

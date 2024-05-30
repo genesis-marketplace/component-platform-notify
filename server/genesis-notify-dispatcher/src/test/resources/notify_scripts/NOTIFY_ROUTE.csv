@@ -1,0 +1,4 @@
+"ENTITY_ID","ENTITY_ID_TYPE","TOPIC_MATCH","GATEWAY_ID"
+"Support","PROFILE_NAME","email","emailTest"
+"Support","PROFILE_NAME","symphonyRoom","SymphonyRoomTest"
+"Support","PROFILE_NAME","symphonyDirect","SymphonyByUserEmailTest"

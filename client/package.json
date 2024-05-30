@@ -1,0 +1,123 @@
+{
+  "name": "@genesislcap/pbc-notify-ui",
+  "description": "Genesis PBC Notify UI",
+  "version": "1.0.36",
+  "license": "SEE LICENSE IN license.txt",
+  "workspaces": [
+    "client"
+  ],
+  "main": "dist/esm/index.js",
+  "types": "dist/dts/index.d.ts",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "config": {
+    "PORT": 5070
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/foundation-notify.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "./e2e": {
+      "default": "./test/e2e/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "e2e": [
+        "./test/e2e/index.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "baseline": "npm run clean && npm run bootstrap",
+    "bootstrap": "npm install --no-fund --no-audit",
+    "bootstrap:ci": "npm ci --no-fund --no-audit",
+    "build": "genx build -b ts",
+    "build:webpack": "genx build",
+    "build:webpack:stats": "genx analyze",
+    "clean": "genx clean dist node_modules",
+    "circular": "npx madge --extensions ts --circular ./src",
+    "commitlint": "node ./scripts/commitlint",
+    "dev": "genx dev -e API_HOST",
+    "dev:docker": "npm run dev -- --host 0.0.0.0",
+    "dev:intellij": "genx dev -e",
+    "dev:no-open": "npm run dev -- --no-open",
+    "dev:https": "npm run dev -- --https",
+    "dev:webpack": "npm run dev -- -b webpack",
+    "serve": "genx serve",
+    "test": "genx test",
+    "test:coverage": "genx test --coverage",
+    "test:coverage:browser": "genx test --coverage --browser",
+    "test:e2e": "genx test --e2e",
+    "test:e2e:debug": "genx test --e2e --debug",
+    "test:e2e:ui": "genx test --e2e --interactive",
+    "test:unit:browser": "genx test --browser",
+    "test:unit:browser:watch": "genx test --browser --watch",
+    "test:unit:watch": "genx test --watch",
+    "test:debug": "genx test --debug",
+    "lint": "genx lint --profile",
+    "lint:fix": "genx lint --fix",
+    "lint:eslint": "genx lint -l eslint --profile",
+    "lint:stylelint": "genx lint -l stylelint",
+    "prepare": "cd .. && husky client/.husky"
+  },
+  "lint-staged": {
+    "*.{ts,js}": "eslint",
+    "*.styles.ts": "stylelint"
+  },
+  "dependencies": {
+    "web-push": "^3.4.4"
+  },
+  "eslintConfig": {
+    "extends": "@genesislcap/eslint-config"
+  },
+  "stylelint": {
+    "extends": "@genesislcap/stylelint-config"
+  },
+  "prettier": "@genesislcap/prettier-config",
+  "madge": {
+    "detectiveOptions": {
+      "ts": {
+        "skipTypeImports": true
+      }
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/format": "^19.0.3",
+    "@genesislcap/eslint-config": "~14",
+    "@genesislcap/eslint-stylelint-builder": "~14",
+    "@genesislcap/foundation-testing": "~14",
+    "@genesislcap/genx": "~14",
+    "@genesislcap/prettier-config": "~14",
+    "@genesislcap/stylelint-config": "~14",
+    "conventional-changelog-conventionalcommits": "^6.1.0",
+    "husky": "9.0.11",
+    "lint-prepush": "^2.2.1",
+    "lint-staged": "^15.2.2",
+    "playwright-lighthouse": "^3.1.0",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.3.1"
+  },
+  "peerDependencies": {
+    "@genesislcap/foundation-comms": "~14",
+    "@genesislcap/foundation-entity-management": "~14",
+    "@genesislcap/foundation-forms": "~14",
+    "@genesislcap/foundation-layout": "~14",
+    "@genesislcap/foundation-logger": "~14",
+    "@genesislcap/foundation-notifications": "~14",
+    "@genesislcap/foundation-ui": "~14",
+    "@genesislcap/foundation-utils": "~14",
+    "@genesislcap/foundation-zero": "~14",
+    "@genesislcap/rapid-design-system": "~14",
+    "@genesislcap/web-core": "~14"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "customElements": "dist/custom-elements.json"
+}

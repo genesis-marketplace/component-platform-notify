@@ -1,0 +1,36 @@
+<!--
+!
+!   System              : Genesis Business Library
+!   Sub-System          : multi-pro-code-test Configuration
+!   Version             : 1.0
+!   Copyright           : (c) Genesis
+!   Date                : 2022-03-18
+!   Function : Provide Process Definitions Config for multi-pro-code-test.
+!
+!   Modification History
+!
+-->
+<processes>
+    <process name="GENESIS_NOTIFY_MANAGER">
+        <start>true</start>
+        <groupId>NOTIFY</groupId>
+        <options>-Xmx1024m -DXSD_VALIDATE=false</options>
+        <module>genesis-notify-eventhandler</module>
+        <package>global.genesis.eventhandler,global.genesis.dataserver.pal,global.genesis.eventhandler.pal,global.genesis.requestreply.pal,global.genesis.notify.event,global.genesis.file.storage.provider</package>
+        <script>genesis-notify-eventhandler.kts,genesis-notify-rules-eventhandler.kts,genesis-notify-rules-dataserver.kts,genesis-notify-rules-reqrep.kts,genesis-notify-entity-info-reqrep.kts</script>
+        <classpath>genesis-notify-script-config*</classpath>
+        <language>pal</language>
+        <description>Management of notify rule data and endpoints for alert generation</description>
+    </process>
+    <process name="GENESIS_NOTIFY_DISPATCHER">
+        <start>true</start>
+        <groupId>NOTIFY</groupId>
+        <primaryOnly>true</primaryOnly>
+        <options>-Xmx512m -DXSD_VALIDATE=false</options>
+        <module>genesis-notify-dispatcher</module>
+        <package>global.genesis.notify,global.genesis.requestreply.pal</package>
+        <script>genesis-notify.kts,genesis-notify-routes-reqrep.kts</script>
+        <language>pal</language>
+        <description>Dispatches alerts</description>
+    </process>
+</processes>
