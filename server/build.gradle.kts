@@ -2,7 +2,7 @@ ext.set("localDaogenVersion", "GENESIS_NOTIFY")
 
 plugins {
     kotlin("jvm") version "1.9.22"
-    id("org.jlleitschuh.gradle.ktlint") version "11.6.1"
+    id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
     id("org.jetbrains.kotlinx.kover") version "0.7.6"
     id("org.gradle.test-retry") version "1.5.8"
     id("com.jfrog.artifactory") version "5.2.0"
