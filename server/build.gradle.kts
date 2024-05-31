@@ -6,7 +6,7 @@ plugins {
     id("org.jetbrains.kotlinx.kover") version "0.7.6"
     id("org.gradle.test-retry") version "1.5.8"
     id("com.jfrog.artifactory") version "5.2.0"
-    id("org.sonarqube") version "4.4.1.3373"
+    id("org.sonarqube") version "5.0.0.4638"
     `maven-publish`
     id("global.genesis.build")
 }
