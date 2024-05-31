@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm") version "1.9.22"
     id("org.jlleitschuh.gradle.ktlint") version "11.6.1"
     id("org.jetbrains.kotlinx.kover") version "0.7.6"
-    id("org.gradle.test-retry") version "1.5.8"
+    id("org.gradle.test-retry") version "1.5.9"
     id("com.jfrog.artifactory") version "5.2.0"
     id("org.sonarqube") version "4.4.1.3373"
     `maven-publish`
